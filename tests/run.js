@@ -2,7 +2,7 @@
 global.window = global;
 global.localStorage = undefined;
 var path = require('path'), root = path.join(__dirname, '..');
-['format', 'engine', 'storage', 'data/_core', 'data/personal', 'data/banking', 'data/corporate', 'data/business', 'data/fsa', 'data/stock', 'data/investment', 'data/trading', 'data/accounting', 'data/micro', 'data/macro', 'data/stats', 'charts']
+['format', 'engine', 'storage', 'data/core', 'data/personal', 'data/banking', 'data/corporate', 'data/business', 'data/fsa', 'data/stock', 'data/investment', 'data/trading', 'data/accounting', 'data/micro', 'data/macro', 'data/stats', 'charts']
   .forEach(function (f) { require(path.join(root, 'js', f + '.js')); });
 var H = window.Hitung, fails = 0, pass = 0;
 function ok(c, m) { if (c) pass++; else { fails++; console.log('GAGAL: ' + m); } }
