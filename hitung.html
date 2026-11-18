@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hitung.in | Kalkulator rumus keuangan dan ekonomi</title>
+<meta name="description" content="Hitung rumus keuangan dan ekonomi dari 12 kategori, lengkap dengan langkah hitung, grafik, dan riwayat. Berjalan di browser, data tidak dikirim ke mana pun.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/hitung-tokens.css">
+<link rel="stylesheet" href="css/hitung.css">
+<script>
+  /* Terapkan tema pilihan sebelum halaman digambar agar tidak berkedip. Tanpa pilihan: ikut sistem. */
+  (function () {
+    try {
+      var t = JSON.parse(localStorage.getItem('hitung.v1.theme'));
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="top">
+  <div class="top-in">
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-controls="nav" aria-expanded="false" aria-label="Buka menu kategori"></button>
+    <a class="brand" href="#/" aria-label="Hitung.in, ke beranda"></a>
+    <form class="search" role="search" id="searchForm" autocomplete="off">
+      <label class="sr" for="q">Cari rumus</label>
+      <span class="search-ic" id="searchIc" aria-hidden="true"></span>
+      <input id="q" name="q" type="search" placeholder="Cari rumus: NPV, margin, inflasi" enterkeyhint="search">
+      <kbd class="kbd" aria-hidden="true">/</kbd>
+    </form>
+    <div class="tools">
+      <label class="sr" for="cur">Mata uang</label>
+      <select id="cur" class="sel"></select>
+      <a class="icon-btn" href="#/riwayat" id="histLink" aria-label="Riwayat perhitungan" title="Riwayat"></a>
+      <div class="seg" role="group" aria-label="Tema tampilan" id="themeSeg"></div>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="shell">
+  <nav class="nav" id="nav" aria-label="Kategori rumus"></nav>
+  <main id="main" tabindex="-1">
+    <div class="skel" role="status" aria-live="polite" aria-busy="true">
+      <span class="sr">Memuat Hitung.in</span>
+      <div class="sk sk-hero"></div>
+      <div class="sk-grid"><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div><div class="sk sk-card"></div></div>
+    </div>
+  </main>
+</div>
+
+<footer class="foot">
+  <p><strong>Hitung.in v2.0.0.</strong> Semua perhitungan berjalan di browser Anda. Angka tidak dikirim ke server mana pun.</p>
+  <p>Hasil bersifat edukatif dan bergantung pada input serta asumsi. Bukan nasihat keuangan, hukum, atau pajak.</p>
+</footer>
+
+<noscript><p class="nojs">Hitung.in membutuhkan JavaScript untuk menjalankan perhitungan. Aktifkan JavaScript di browser lalu muat ulang halaman.</p></noscript>
+
+<script>
+  /* Catat berkas skrip yang gagal dimuat agar bisa ditampilkan bila aplikasi tidak bisa jalan. */
+  window.__bootErr = [];
+  window.addEventListener('error', function (e) {
+    var t = e.target;
+    if (t && t.tagName === 'SCRIPT') window.__bootErr.push(t.getAttribute('src'));
+  }, true);
+</script>
+<script src="js/format.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data/_core.js"></script>
+<script src="js/data/personal.js"></script>
+<script src="js/data/banking.js"></script>
+<script src="js/data/corporate.js"></script>
+<script src="js/data/business.js"></script>
+<script src="js/data/fsa.js"></script>
+<script src="js/data/stock.js"></script>
+<script src="js/data/investment.js"></script>
+<script src="js/data/trading.js"></script>
+<script src="js/data/accounting.js"></script>
+<script src="js/data/micro.js"></script>
+<script src="js/data/macro.js"></script>
+<script src="js/data/stats.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/hitung-icons.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  /* Jika skeleton masih tampil setelah 10 detik, berarti skrip tidak pernah selesai dimuat. */
+  setTimeout(function () {
+    var m = document.getElementById('main');
+    if (m && m.querySelector('.skel')) {
+      var f = (window.__bootErr || []).join(', ');
+      m.innerHTML = '<div style="margin:24px 16px;padding:20px;border:1px solid #d5cabb;border-radius:14px;background:#fff;color:#2a2420;line-height:1.6"><strong>Hitung.in belum bisa dimuat.</strong><br>Periksa koneksi lalu muat ulang halaman.' + (f ? '<br>Berkas gagal: <code>' + f + '</code>' : '') + '</div>';
+    }
+  }, 10000);
+</script>
+</body>
+</html>
