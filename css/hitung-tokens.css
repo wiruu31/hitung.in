@@ -1,0 +1,151 @@
+/* Hitung.in v2.0.0 | Warm Ledger: token warna, tipografi, bentuk, dan tema.
+   Tema: otomatis (ikut sistem) secara bawaan; data-theme="light" atau "dark" untuk pilihan manual. */
+
+:root {
+  color-scheme: light dark;
+
+  /* tipografi */
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-num: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* bentuk dan gerak */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-pill: 999px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --t-fast: 150ms;
+  --t-med: 240ms;
+
+  --hdr: 68px;
+}
+
+/* ---------- terang ---------- */
+:root,
+:root[data-theme="light"] {
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --surface-2: #f4efe6;
+  --surface-3: #ece5d8;
+  --ink: #2a2420;
+  --ink-2: #5c524a;
+  --ink-3: #7a6f64;
+  --line: #e7dfd3;
+  --line-strong: #d5cabb;
+
+  --brand: #1f6f5b;
+  --brand-deep: #14503f;
+  --brand-ink: #ffffff;
+  --brand-soft: #e3f0ea;
+  --brand-text: #1a6350;
+
+  --accent: #c77d2e;
+  --accent-soft: #f8ecda;
+  --accent-ink: #8a4f10;
+
+  --ok: #1f6f5b;
+  --err: #b3261e;
+  --err-soft: #fbe9e7;
+  --focus: #1f6f5b;
+
+  --shadow-1: 0 1px 2px rgba(42, 36, 32, .06), 0 1px 1px rgba(42, 36, 32, .04);
+  --shadow-2: 0 4px 12px rgba(42, 36, 32, .07), 0 1px 3px rgba(42, 36, 32, .05);
+  --shadow-3: 0 18px 40px -12px rgba(42, 36, 32, .22), 0 4px 10px rgba(42, 36, 32, .06);
+  --hero-glow: radial-gradient(60% 80% at 85% 0%, rgba(199, 125, 46, .16), transparent 70%), radial-gradient(50% 70% at 0% 100%, rgba(31, 111, 91, .12), transparent 70%);
+  --head-grad: linear-gradient(140deg, #23826a 0%, #1f6f5b 45%, #14503f 100%);
+  --header-bg: rgba(250, 247, 242, .82);
+
+  /* hue kategori: terang */
+  --cat-sb: 42%; --cat-lb: 92%; --cat-sf: 48%; --cat-lf: 28%;
+
+  /* seri grafik */
+  --s0: #1f6f5b; --s1: #c77d2e; --s2: #4a6fa5; --s3: #8a5a83;
+  --k0: #1f6f5b; --k1: #c77d2e; --k2: #4a6fa5; --k3: #8a5a83; --k4: #6f8f8a; --k5: #b4532a;
+  --c-neg: #b4532a;
+}
+
+/* ---------- gelap otomatis (ikut sistem) ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171310;
+    --surface: #211b17;
+    --surface-2: #2a231e;
+    --surface-3: #342c26;
+    --ink: #f3ede4;
+    --ink-2: #b9aea1;
+    --ink-3: #978c80;
+    --line: #342d27;
+    --line-strong: #4a4037;
+
+    --brand: #3fb594;
+    --brand-deep: #2c8f73;
+    --brand-ink: #0c1a15;
+    --brand-soft: #1b2e27;
+    --brand-text: #5ccdab;
+
+    --accent: #e0a04f;
+    --accent-soft: #3a2c19;
+    --accent-ink: #f0b766;
+
+    --ok: #5ccdab;
+    --err: #ff8f84;
+    --err-soft: #3c1f1c;
+    --focus: #5ccdab;
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+    --shadow-2: 0 4px 14px rgba(0, 0, 0, .35);
+    --shadow-3: 0 18px 40px -12px rgba(0, 0, 0, .6), 0 4px 10px rgba(0, 0, 0, .3);
+    --hero-glow: radial-gradient(60% 80% at 85% 0%, rgba(224, 160, 79, .14), transparent 70%), radial-gradient(50% 70% at 0% 100%, rgba(63, 181, 148, .12), transparent 70%);
+    --head-grad: linear-gradient(140deg, #25866c 0%, #1d6b57 50%, #14503f 100%);
+    --header-bg: rgba(23, 19, 16, .82);
+
+    --cat-sb: 26%; --cat-lb: 19%; --cat-sf: 55%; --cat-lf: 72%;
+
+    --s0: #3fb594; --s1: #e0a04f; --s2: #7ea6dc; --s3: #c58fbd;
+    --k0: #3fb594; --k1: #e0a04f; --k2: #7ea6dc; --k3: #c58fbd; --k4: #8fb3ad; --k5: #e0805a;
+    --c-neg: #e0805a;
+  }
+}
+
+/* ---------- gelap manual ---------- */
+:root[data-theme="dark"] {
+  --bg: #171310;
+  --surface: #211b17;
+  --surface-2: #2a231e;
+  --surface-3: #342c26;
+  --ink: #f3ede4;
+  --ink-2: #b9aea1;
+  --ink-3: #978c80;
+  --line: #342d27;
+  --line-strong: #4a4037;
+
+  --brand: #3fb594;
+  --brand-deep: #2c8f73;
+  --brand-ink: #0c1a15;
+  --brand-soft: #1b2e27;
+  --brand-text: #5ccdab;
+
+  --accent: #e0a04f;
+  --accent-soft: #3a2c19;
+  --accent-ink: #f0b766;
+
+  --ok: #5ccdab;
+  --err: #ff8f84;
+  --err-soft: #3c1f1c;
+  --focus: #5ccdab;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow-2: 0 4px 14px rgba(0, 0, 0, .35);
+  --shadow-3: 0 18px 40px -12px rgba(0, 0, 0, .6), 0 4px 10px rgba(0, 0, 0, .3);
+  --hero-glow: radial-gradient(60% 80% at 85% 0%, rgba(224, 160, 79, .14), transparent 70%), radial-gradient(50% 70% at 0% 100%, rgba(63, 181, 148, .12), transparent 70%);
+  --head-grad: linear-gradient(140deg, #25866c 0%, #1d6b57 50%, #14503f 100%);
+  --header-bg: rgba(23, 19, 16, .82);
+
+  --cat-sb: 26%; --cat-lb: 19%; --cat-sf: 55%; --cat-lf: 72%;
+
+  --s0: #3fb594; --s1: #e0a04f; --s2: #7ea6dc; --s3: #c58fbd;
+  --k0: #3fb594; --k1: #e0a04f; --k2: #7ea6dc; --k3: #c58fbd; --k4: #8fb3ad; --k5: #e0805a;
+  --c-neg: #e0805a;
+}
