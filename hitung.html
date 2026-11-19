@@ -9,6 +9,12 @@
 <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="hitung.webmanifest">
+<link rel="apple-touch-icon" href="icons/hitung-apple-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hitung.in">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -59,7 +65,7 @@
 </div>
 
 <footer class="foot">
-  <p><strong>Hitung.in v2.0.0.</strong> Semua perhitungan berjalan di browser Anda. Angka tidak dikirim ke server mana pun.</p>
+  <p><strong>Hitung.in v2.1.0.</strong> Semua perhitungan berjalan di browser Anda. Angka tidak dikirim ke server mana pun.</p>
   <p>Hasil bersifat edukatif dan bergantung pada input serta asumsi. Bukan nasihat keuangan, hukum, atau pajak.</p>
 </footer>
 
@@ -92,6 +98,7 @@
 <script src="js/charts.js"></script>
 <script src="js/hitung-icons.js"></script>
 <script src="js/ui.js"></script>
+<script src="js/hitung-pwa.js"></script>
 <script>
   /* Jika skeleton masih tampil setelah 10 detik, berarti skrip tidak pernah selesai dimuat. */
   setTimeout(function () {
