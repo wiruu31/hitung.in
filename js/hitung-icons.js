@@ -1,4 +1,4 @@
-/* Hitung.in v2.0.0: set ikon garis SVG (24x24, stroke 1.75). Dipakai lewat Hitung.icon(nama, ukuran). */
+/* Hitung.in v2.1.0: set ikon garis SVG (24x24, stroke 1.75). Dipakai lewat Hitung.icon(nama, ukuran). */
 (function () {
   'use strict';
   var H = (window.Hitung = window.Hitung || {});
@@ -36,6 +36,7 @@
     chevron: '<path d="M6 9l6 6 6-6"/>',
     check: '<path d="M5 12l5 5 9-10"/>',
     external: '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
+    download: '<path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>',
     shield: '<path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/>'
   };
 

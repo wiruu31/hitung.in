@@ -1,4 +1,4 @@
-/* Hitung.in v2.0.0: antarmuka. Rute berbasis hash, semua tampilan dibangun dari registri rumus. */
+/* Hitung.in v2.1.0: antarmuka. Rute berbasis hash, semua tampilan dibangun dari registri rumus. */
 (function () {
   'use strict';
   var H = window.Hitung || {};
@@ -251,6 +251,10 @@
       '<li>Ukuran return historis dan statistik tidak menjamin hasil masa depan.</li>' +
       '<li>Mata uang hanya mengubah simbol dan format tampilan. Angka tidak dikonversi nilai tukar.</li>' +
       '<li>Ini alat bantu belajar dan estimasi. Bukan nasihat keuangan, hukum, atau pajak.</li></ul></div>' +
+      '<div class="panel" style="margin-top:16px"><h2>Pasang sebagai aplikasi</h2><p>Hitung.in bisa dipasang di layar utama dan berjalan tanpa internet setelah dibuka sekali secara online.</p><ul>' +
+      '<li><strong>Android (Chrome):</strong> tekan tombol Pasang yang muncul, atau menu tiga titik lalu Instal aplikasi.</li>' +
+      '<li><strong>iPhone atau iPad (Safari):</strong> tekan tombol Bagikan, lalu Tambahkan ke Layar Utama.</li>' +
+      '<li><strong>Komputer (Chrome atau Edge):</strong> klik ikon pasang di ujung kanan kolom alamat.</li></ul></div>' +
       '<div class="panel" style="margin-top:16px"><h2>Pintasan keyboard</h2><p>Tekan <kbd class="kbd" style="position:static;transform:none;display:inline-block">/</kbd> atau <kbd class="kbd" style="position:static;transform:none;display:inline-block">Ctrl</kbd> + <kbd class="kbd" style="position:static;transform:none;display:inline-block">K</kbd> untuk langsung mencari rumus.</p></div>';
     show(h, 'Tentang dan batasan');
   }
